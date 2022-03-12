@@ -1,0 +1,10 @@
+<messaging:emailTemplate subject="{!$Label.Congratulation}"
+                         recipientType="Contact"
+                         relatedToType="Account"
+                         language="{!recipient.Language__c}">
+    <messaging:htmlEmailBody>
+        {!$Label.Hello}, {!recipient.Name}!<br/>
+        {!$Label.Body}<br/>
+        <img src="{!$Resource[$Label.Flag]}"/>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

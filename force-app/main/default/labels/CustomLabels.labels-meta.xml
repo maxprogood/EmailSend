@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Body</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Body</shortDescription>
+        <value>Happy birthday to you.
+        We wish you happiness, health and success.</value>
+    </labels>
+    <labels>
+        <fullName>Congratulation</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Congratulation</shortDescription>
+        <value>Congratulation</value>
+    </labels>
+    <labels>
+        <fullName>Flag</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Flag</shortDescription>
+        <value>FlagUSA</value>
+    </labels>
+    <labels>
+        <fullName>Hello</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Hello</shortDescription>
+        <value>Dear,</value>
+    </labels>
+</CustomLabels>
