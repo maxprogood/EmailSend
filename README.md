@@ -39,5 +39,5 @@ To use the method, you should create your own organization. You can use macros f
 </messaging:emailTemplate>
 ~~~
 
-
+[Please see guide for scratch org creation at path](https://github.com/maxprogood/EmailSend/blob/master/force-app/main/default/Doc/Create%20Scrch%20Org.md)</br>
 Don't forget to add the custom field Language__c(English, German, Spanish) to the contact object.
