@@ -1,9 +1,43 @@
+# EmailSend
 This method wishes users a happy birthday in the language of their contact,
-which can be set during contact creation.
-The default language is English.
-The EmailService class is responsible for sending messages.
-The PresentEmail class is responsible for finding suitable contacts and sending them a message.
+which can be set during contact creation.(*Spanish, German, English.*)
 To use the method, you should create your own organization. You can use macros for this.
 
 **This part is responsible for sorting contacts whose birthday is today.**
+~~~
+    public Database.QueryLocator start(Database.BatchableContext bc) {
+        return Database.getQueryLocator([
+                SELECT Id, AccountId
+                FROM Contact
+                WHERE Birthdate = TODAY
+        ]);
+    }
+~~~
+**Send messages to users.**
+```
+    public void execute(Database.BatchableContext bc, List<Contact> scope) {
+        List<Messaging.SingleEmailMessage> emails = new List<Messaging.SingleEmailMessage>();
+        for (Contact contact : scope) {
+            emails.add(EmailService.getEmailTemplate('Present', contact.Id, contact.AccountId));
+        }
+        if (!emails.isEmpty()) {
+            Messaging.sendEmail(emails);
+        }
+    }
+```
+**This is a message template.**
+~~~
+<messaging:emailTemplate subject="{!$Label.Congratulation}"
+                         recipientType="Contact"
+                         relatedToType="Account"
+                         language="{!recipient.Language__c}">
+    <messaging:htmlEmailBody>
+        {!$Label.Hello}, {!recipient.Name}!<br/>
+        {!$Label.Body}<br/>
+        <img src="{!$Resource[$Label.Flag]}"/>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>
+~~~
 
+
+Don't forget to add the custom field Language__c(English, German, Spanish) to the contact object.
