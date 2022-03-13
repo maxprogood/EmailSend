@@ -39,5 +39,5 @@ To use the method, you should create your own organization. You can use macros f
 </messaging:emailTemplate>
 ~~~
 
-[Please see guide for scratch org creation at path](https://github.com/maxprogood/EmailSend/blob/master/Doc/Create%20Scrch%20Org.md)</br>
+[Please see guide for scratch org creation at path](https://github.com/maxprogood/EmailSend/blob/master/doc/Create%20Scrch%20Org.md)</br>
 
