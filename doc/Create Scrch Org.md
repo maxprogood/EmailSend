@@ -17,7 +17,3 @@ sfdx force:org:create -f config/project-scratch-def.json -d 30 -s -a 'Your Scrat
 ~~~
 sfdx force:source:push
 ~~~
-4 Apply scratch org in the IDE (Idea or Webstorm)
-~~~
-File > Settings > Languages and frameworks > Illuminate Cloud (...) > Select in conection column "Your Scratch Name"
-~~~
