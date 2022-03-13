@@ -1,1 +1,0 @@
-System.schedule('Present','0 0 10 1/1 * ? *', new PresentEmailSchedulable());
