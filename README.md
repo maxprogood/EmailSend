@@ -1,5 +1,5 @@
 # EmailSend
-This method wishes users a happy birthday in the language of their contact,
+This project wishes users a happy birthday in the language of their contact,
 which can be set during contact creation.(*Spanish, German, English.*)
 To use the method, you should create your own organization. You can use macros for this.
 
